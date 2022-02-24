@@ -1,0 +1,63 @@
+@import "../../styles/_variables"
+
+#search-form
+  position: relative
+  display: flex
+  flex-direction: row
+  width: 100%
+  #search-eraser
+    display: none
+    div svg
+      color: $primary-color
+      opacity: 0.3
+      position: absolute
+      right: 1rem
+      top: 0.85rem
+      &:hover
+        cursor: pointer
+        opacity: 0.6
+      @media screen and (max-width: 540px)
+        right: 0.75rem
+  input
+    width: 100%
+    display: flex
+    outline: none
+    border-style: none
+    padding: 15px 20px
+    border-radius: 15px
+    background-color: $primary-lighter-color
+    color: $primary-color
+    font-family: "Roboto Light", sans-serif
+    font-size: 1rem
+
+.top-block
+  width: 100%
+  display: flex
+
+button.donate-btn
+  padding: 20px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: "Roboto Light", sans-serif
+  font-size: 1rem
+  color: white
+  border-style: none
+  border-radius: 15px
+  height: 50px
+  background-color: $donate-color
+  margin-left: 1rem
+  span
+    margin-right: 0.5rem
+    @media screen and (max-width: 540px)
+      display: none
+  div div
+    display: flex
+    align-items: center
+  &:hover
+    cursor: pointer
+    background-color: $donate-hover-color
+    transition: all 0.3s ease
+  @media screen and (max-width: 540px)
+    padding: 20px 15px
+    margin-left: 0.5rem

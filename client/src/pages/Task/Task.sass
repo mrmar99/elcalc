@@ -1,0 +1,205 @@
+@import "../../styles/_variables"
+
+.container
+  position: relative
+
+.task_top
+  width: 100%
+  max-width: 100%
+  display: flex
+  align-items: center
+
+.back_btn
+  position: absolute
+  padding: 15px
+  display: flex
+  align-items: center
+  border-style: none
+  border-radius: 15px
+  background-color: $primary-lighter-color
+  transition: all 0.3s ease
+  @media screen and (max-width: 768px)
+    position: unset
+  div div
+    display: flex
+    align-items: center
+  &:hover
+    cursor: pointer
+    transition: all 0.3s ease
+    background-color: $primary-darker-color
+
+.task_title
+  height: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  flex: 1
+  color: $primary-color
+  font-family: "Roboto Black", sans-serif
+
+.task-type_title
+  display: none
+  margin-top: 2rem
+  font-family: "Roboto Medium", sans-serif
+  font-size: 1em
+
+.task-type_title_active
+  display: block
+
+.task-type_nav
+  margin-top: 1rem
+  display: flex
+  justify-content: center
+  align-items: center
+
+.nav_btn
+  padding: 10px
+  display: flex
+  align-items: center
+  border-style: none
+  border-radius: 13px
+  background-color: $task-type-light-color
+  margin-left: 1rem
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
+  transition: all 0.3s ease
+  @media screen and (max-width: 490px)
+    margin-left: 0.5rem
+    padding: 7px
+    border-radius: 10px
+  div
+    display: flex
+    align-items: center
+  &:first-child
+    margin-left: 0
+  &:hover
+    cursor: pointer
+    background-color: $task-type-color
+    transition: all 0.3s ease
+
+.active-nav_btn
+  background-color: $task-type-color
+
+.task-type_area
+  display: none
+  margin-top: 2rem
+  width: 100%
+  max-width: 100%
+  background-color: $primary-lighter-color
+  border-radius: 15px
+  box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.25)
+
+.task-type_area_active
+  display: block
+
+.task-type_calculator
+  width: 100%
+  display: flex
+  @media screen and (max-width: 920px)
+    flex-direction: column
+
+.task-type_img-area
+  padding: 1rem
+  margin: 1rem 0.5rem 1rem 1rem
+  background-color: #fff
+  border-radius: 15px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: 3
+  @media screen and (max-width: 1100px)
+    flex: 2
+  @media screen and (max-width: 920px)
+    margin: 1rem 1rem 0.5rem 1rem
+  img
+    max-width: 100%
+    max-height: 45vh
+
+.task-type_calc-area
+  padding: 1.2rem 1rem 1rem 1rem
+  margin: 1rem 1rem 1rem 0.5rem
+  background-color: #fff
+  border-radius: 15px
+  flex: 1
+  text-align: center
+  position: relative
+  @media screen and (max-width: 920px)
+    margin: 0.5rem 1rem 1rem 1rem
+
+.calc-area_title
+  font-family: "Roboto Medium", sans-serif
+
+.calc-area_form
+  margin-top: 1rem
+  padding-bottom: 5rem
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  .calc-area_inputs
+    width: 100%
+    label
+      margin-top: 0.5rem
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .input-component_name
+        font-family: "Roboto Black", sans-serif
+        margin-right: 1.1rem
+        width: 2rem
+        text-align: left
+        @media screen and (max-width: 540px)
+          width: 1.5rem
+      input
+        flex: 1
+        padding: 1rem
+        border-radius: 15px
+        outline: none
+        border-style: none
+        background-color: $primary-lighter-color
+        font-family: "Roboto Light", sans-serif
+        font-size: 1em
+        @media screen and (max-width: 540px)
+          font-size: 0.8em
+  .input-component_btn
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    margin: 1rem
+    button
+      width: 100%
+      padding: 15px 30px
+      border-radius: 15px
+      outline: none
+      border-style: none
+      background-color: $task-type-color
+      color: #fff
+      font-family: "Roboto Medium", sans-serif
+      font-size: 1em
+      transition: all 0.5s ease
+      &:hover
+        transition: all 0.5s ease
+        background-color: #fff
+        outline: 1px solid $task-type-color
+        cursor: pointer
+        color: $task-type-color
+
+.accordion
+  padding: 1rem 1.5rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: #fff
+  border-radius: 15px
+  margin: 1rem
+  transition: all 0.3s ease
+  .accordion_name
+    font-family: "Roboto Medium", sans-serif
+  &:hover
+    transition: all 0.3s ease
+    cursor: pointer
+    background-color: #e5e5e5
+  div div
+    display: flex
+    align-items: center
+
